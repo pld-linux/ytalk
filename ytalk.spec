@@ -11,6 +11,7 @@ Release:	10
 License:	BSD
 Group:		Networking
 Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
+# Source0-md5:	e678401ab48be6728ec700458ad8ace0
 Patch0:		%{name}.patch
 URL:		http://www.iagora.com/~espel/index.html
 BuildRequires:	autoconf
