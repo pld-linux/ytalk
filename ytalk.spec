@@ -5,12 +5,14 @@ Summary(pl):	klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1
-Release:	2
+Release:	4
 Copyright:	BSD
 Group:		Networking
 Source:		http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:		ytalk.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
+BuildPrereq:	XFree86-devel
+BuildPrereq:	ncurses-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -52,7 +54,7 @@ CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 	--prefix=/usr \
 	--sysconfdir=/etc \
 	--with-x
-make 
+make INCLUDES="-I/usr/include/ncurses -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -63,12 +65,13 @@ make install \
 
 gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
 	README
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README 
+%doc README.gz
 
 %attr(755,root,root) /usr/bin/*
 /usr/man/man1/*
@@ -76,8 +79,10 @@ rm -rf $RPM_BUILD_ROOT
 %config %verify(not size md5 mtime) /etc/ytalkrc
 
 %changelog
-* Tue Mar 16 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.1-2]
+* Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [3.1-4]
+- recompiles on new rpm,
+- added BuildPrereq: XFree86-devel, ncurses-devel,
 - removed man group from man pages,
 - gzipping man pages instead bzipping2.
 
