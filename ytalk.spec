@@ -52,7 +52,7 @@ Standart talkd daemon'u kullanýr.
 autoconf
 CPPFLAGS="-I%{_includedir}/ncurses" \
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target} \
+./configure %{_target_platform} \
 	--prefix=%{_prefix} \
 	--sysconfdir=/etc \
 	--without-x
