@@ -8,6 +8,7 @@ Version:	3.1
 Release:	4
 Copyright:	BSD
 Group:		Networking
+Group(pl):	Sieciowe
 Source:		http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:		ytalk.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
@@ -50,7 +51,7 @@ Standart talkd daemon'u kullanýr.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure \
+./configure %{_target} \
 	--prefix=/usr \
 	--sysconfdir=/etc \
 	--with-x
