@@ -7,7 +7,7 @@ Summary(pt_BR):	Usa o protocolo de talk da internet para criar sessões de chat e
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1.1
-Release:	11
+Release:	12
 License:	BSD
 Group:		Networking
 Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
