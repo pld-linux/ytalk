@@ -57,7 +57,7 @@ CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 	--prefix=%{_prefix} \
 	--sysconfdir=%{_sysconfdir} \
 	--without-x
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
