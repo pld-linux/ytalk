@@ -89,4 +89,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README ChangeLog BUGS
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%config %verify(not size md5 mtime) %{_sysconfdir}/ytalkrc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/ytalkrc
