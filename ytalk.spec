@@ -4,15 +4,14 @@ Summary(fr):	Utilise le protocole talk pour créer des discussions multi-utilisat
 Summary(pl):	klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
-Version:	3.1
-Release:	5
+Version:	3.1.1
+Release:	1
 Copyright:	BSD
 Group:		Networking
 Group(pl):	Sieciowe
 Source:		http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:		ytalk.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
-BuildPrereq:	XFree86-devel
 BuildPrereq:	ncurses-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -51,12 +50,13 @@ Standart talkd daemon'u kullanýr.
 
 %build
 autoconf
+CPPFLAGS="-I/usr/include/ncurses" \
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
 	--prefix=/usr \
 	--sysconfdir=/etc \
-	--with-x
-make INCLUDES="-I/usr/include/ncurses -I/usr/X11R6/include"
+	--without-x
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
