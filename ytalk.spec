@@ -8,9 +8,10 @@ Version:	3.1.1
 Release:	3
 License:	BSD
 Group:		Networking
+Group(de):	Netzwerkwesen
 Group(pl):	Sieciowe
 Source0:	http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
-Patch0:		ytalk.patch
+Patch0:		%{name}.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
 BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -52,7 +53,7 @@ içerir. Standart talkd daemon'u kullanýr.
 %build
 autoconf
 CPPFLAGS="-I%{_includedir}/ncurses" \
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
+CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 ./configure %{_target_platform} \
 	--prefix=%{_prefix} \
 	--sysconfdir=%{_sysconfdir} \
@@ -65,8 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
