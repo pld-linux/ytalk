@@ -64,7 +64,7 @@ içerir. Standart talkd daemon'u kullanýr.
 %patch -p1
 
 %build
-autoconf
+%{__autoconf}
 CPPFLAGS="-I%{_includedir}/ncurses" \
 CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 ./configure %{_target_platform} \
