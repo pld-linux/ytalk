@@ -12,7 +12,7 @@ Group(pl):	Sieciowe
 Source:		http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:		ytalk.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
-BuildPrereq:	ncurses-devel
+BuildRequires:	ncurses-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
