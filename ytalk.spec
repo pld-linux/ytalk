@@ -1,20 +1,22 @@
 Summary:	Uses internet talk protocol to create multiuser chat sessions
-Summary(de):	Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen 
+Summary(de):	Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen
+Summary(es):	Usa el protocolo de talk de la internet para crear sesiones de chat entre varios usuarios
 Summary(fr):	Utilise le protocole talk pour créer des discussions multi-utilisateurs
 Summary(pl):	Klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
+Summary(pt_BR):	Usa o protocolo de talk da internet para criar sessões de chat entre vários usuários
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1.1
-Release:	3
+Release:	4
 License:	BSD
 Group:		Networking
 Group(de):	Netzwerkwesen
 Group(es):	Red
 Group(pl):	Sieciowe
 Group(pt_BR):	Rede
-Source0:	http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
+Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
 Patch0:		%{name}.patch
-URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
+URL:		http://www.iagora.com/~espel/index.html
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,6 +34,12 @@ Unterhaltung und die Umleitung von Programmausgaben an andere
 ermöglicht und ein einfaches Befehlsmenü enthält. Es verwendet
 denselben Talk-Dämon wie das Standardprogramm.
 
+%description -l es
+ytalk es una extensión del protocolo "talk" de Internet que permite
+más de dos usuarios por conversación, nueva orientación de la salida
+del programa para otros, así como un menú de comandos fácil de
+usar. Utiliza el mismo daemon "talk" que el programa "talk" padrón.
+
 %description -l fr
 ytalk est une extension du protocole standard Internet 'talk' qui
 accepte plus de deux utilisateurs par conversation, la redirection des
@@ -42,6 +50,12 @@ utiliser. Il utilise le même démon que le programme talk.
 Ytalk jest rozszerzeniem standardowego protoko³u internetowego talk.
 Pozwala na prowadzenie konwersacji przez wiêcej ni¿ dwie osoby, u¿ywa
 tego samego demona talkd co standardowy klient talk.
+
+%description -l pt_BR
+ytalk é uma extensão do protocolo "talk" da Internet que permite
+mais de dois usuários por conversação, redirecionamento da saída
+do programa para outros, assim como um menu de comandos fácil de
+usar. Ele utiliza o mesmo daemon "talk" que o programa "talk" padrão.
 
 %description -l tr
 ytalk, standart talk yazýlýmýnýn geliþmiþ bir sürümüdür. Ýkiden fazla
@@ -69,16 +83,14 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf README
+gzip -9nf README ChangeLog BUGS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz
-
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
 %config %verify(not size md5 mtime) %{_sysconfdir}/ytalkrc
