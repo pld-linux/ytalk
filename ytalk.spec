@@ -33,8 +33,8 @@ denselben Talk-Dämon wie das Standardprogramm.
 %description -l es
 ytalk es una extensión del protocolo "talk" de Internet que permite
 más de dos usuarios por conversación, nueva orientación de la salida
-del programa para otros, así como un menú de comandos fácil de
-usar. Utiliza el mismo daemon "talk" que el programa "talk" padrón.
+del programa para otros, así como un menú de comandos fácil de usar.
+Utiliza el mismo daemon "talk" que el programa "talk" padrón.
 
 %description -l fr
 ytalk est une extension du protocole standard Internet 'talk' qui
@@ -48,10 +48,10 @@ Pozwala na prowadzenie konwersacji przez wiêcej ni¿ dwie osoby, u¿ywa
 tego samego demona talkd co standardowy klient talk.
 
 %description -l pt_BR
-ytalk é uma extensão do protocolo "talk" da Internet que permite
-mais de dois usuários por conversação, redirecionamento da saída
-do programa para outros, assim como um menu de comandos fácil de
-usar. Ele utiliza o mesmo daemon "talk" que o programa "talk" padrão.
+ytalk é uma extensão do protocolo "talk" da Internet que permite mais
+de dois usuários por conversação, redirecionamento da saída do
+programa para outros, assim como um menu de comandos fácil de usar.
+Ele utiliza o mesmo daemon "talk" que o programa "talk" padrão.
 
 %description -l tr
 ytalk, standart talk yazýlýmýnýn geliþmiþ bir sürümüdür. Ýkiden fazla
@@ -61,7 +61,7 @@ içerir. Standart talkd daemon'u kullanýr.
 
 %prep
 %setup -q
-%patch -p1 
+%patch -p1
 
 %build
 autoconf
