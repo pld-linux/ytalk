@@ -13,7 +13,7 @@ Source:		http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:		ytalk.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
 BuildRequires:	ncurses-devel >= 5.0
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 ytalk is an extension of the standard Internet 'talk' protocol that allows 
