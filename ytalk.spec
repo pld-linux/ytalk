@@ -5,7 +5,7 @@ Summary(pl):	klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1
-Release:	4
+Release:	5
 Copyright:	BSD
 Group:		Networking
 Group(pl):	Sieciowe
@@ -50,6 +50,7 @@ Standart talkd daemon'u kullanýr.
 %patch -p1 
 
 %build
+autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
 	--prefix=/usr \
@@ -64,7 +65,7 @@ make install \
 	prefix=$RPM_BUILD_ROOT/usr \
 	sysconfdir=$RPM_BUILD_ROOT/etc
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
 	README
 
 %clean
@@ -75,11 +76,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.gz
 
 %attr(755,root,root) /usr/bin/*
-/usr/man/man1/*
+/usr/share/man/man1/*
 
 %config %verify(not size md5 mtime) /etc/ytalkrc
 
 %changelog
+* Mon May 10 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [3.1-5]
+- package is now FHS 2.0 compliant.
+
 * Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [3.1-4]
 - recompiles on new rpm,
