@@ -53,16 +53,15 @@ autoconf
 CPPFLAGS="-I%{_includedir}/ncurses" \
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
-	--prefix=/usr \
+	--prefix=%{_prefix} \
 	--sysconfdir=/etc \
 	--without-x
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/X11R6/lib/X11/{,pl}/app-defaults
 make install \
-	prefix=$RPM_BUILD_ROOT/usr \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	sysconfdir=$RPM_BUILD_ROOT/etc
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
