@@ -78,39 +78,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %config %verify(not size md5 mtime) /etc/ytalkrc
-
-%changelog
-* Mon May 10 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [3.1-5]
-- package is now FHS 2.0 compliant.
-
-* Mon Apr 19 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.1-4]
-- recompiles on new rpm,
-- added BuildPrereq: XFree86-devel, ncurses-devel,
-- removed man group from man pages,
-- gzipping man pages instead bzipping2.
-
-* Sat Nov 21 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [3.1-1d]
-- new autoconf based %build and %install,
-- added using $RPM_OPT_FLAGS during compile,
-- added "rm -rf $RPM_BUILD_ROOT" on top %install,
-- modified pl Summary,
-- added ytalk.patch with fix path to system ytalkrc (must be
-  /etc/ytalk) and modify default ytalkrc.
-
-* Thu Jul 23 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [3.0.3-4d]
-- added pl translation,
-- added buildroot support,
-- added %verify in %config file,
-
-* Fri Apr 24 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Wed Apr 15 1998 Erik Troan <ewt@redhat.com>
-- built against new ncurses
-
-* Thu Jul 31 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
