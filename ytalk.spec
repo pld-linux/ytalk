@@ -5,7 +5,7 @@ Summary(pl):	klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Networking
 Group(pl):	Sieciowe
