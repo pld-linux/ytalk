@@ -50,7 +50,7 @@ Standart talkd daemon'u kullanýr.
 
 %build
 autoconf
-CPPFLAGS="-I/usr/include/ncurses" \
+CPPFLAGS="-I%{_includedir}/ncurses" \
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
 	--prefix=/usr \
