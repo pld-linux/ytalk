@@ -1,7 +1,7 @@
-Summary:	uses internet talk protocol to create multiuser chat sessions
-Summary(de):	benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen 
+Summary:	Uses internet talk protocol to create multiuser chat sessions
+Summary(de):	Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen 
 Summary(fr):	Utilise le protocole talk pour créer des discussions multi-utilisateurs
-Summary(pl):	klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
+Summary(pl):	Klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1.1
@@ -9,10 +9,13 @@ Release:	3
 License:	BSD
 Group:		Networking
 Group(de):	Netzwerkwesen
+Group(es):	Red
 Group(pl):	Sieciowe
+Group(pt_BR):	Rede
 Source0:	http://www.eleves.ens.fr/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch0:		%{name}.patch
 URL:		http://www.eleves.ens.fr/home/espel/ytalk/ytalk.html
+BuildRequires:	autoconf
 BuildRequires:	ncurses-devel >= 5.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
