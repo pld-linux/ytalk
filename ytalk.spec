@@ -8,6 +8,7 @@ Version:     3.1
 Release:     1
 Copyright:   BSD
 Group:       Networking
+Group(pl):   Sieciowe
 Source:      http://www.eleves.ens.fr:8080/home/espel/ytalk/%{name}-%{version}.tar.gz
 Patch:       ytalk.patch
 URL:         http://www.eleves.ens.fr:8080/home/espel/ytalk/ytalk.html
