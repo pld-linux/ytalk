@@ -7,7 +7,7 @@ Summary(pt_BR):	Usa o protocolo de talk da internet para criar sessões de chat e
 Summary(tr):	Talk protokolu kullanarak ikiden fazla kiþinin konuþmasýný saðlar
 Name:		ytalk
 Version:	3.1.1
-Release:	4
+Release:	5
 License:	BSD
 Group:		Networking
 Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Patch0:		%{name}.patch
 URL:		http://www.iagora.com/~espel/index.html
 BuildRequires:	autoconf
 BuildRequires:	ncurses-devel >= 5.0
+Provides:	talk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -79,14 +80,12 @@ rm -rf $RPM_BUILD_ROOT
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf README ChangeLog BUGS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog BUGS
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %config %verify(not size md5 mtime) %{_sysconfdir}/ytalkrc
