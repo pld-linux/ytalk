@@ -10,10 +10,6 @@ Version:	3.1.1
 Release:	4
 License:	BSD
 Group:		Networking
-Group(de):	Netzwerkwesen
-Group(es):	Red
-Group(pl):	Sieciowe
-Group(pt_BR):	Rede
 Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
 Patch0:		%{name}.patch
 URL:		http://www.iagora.com/~espel/index.html
