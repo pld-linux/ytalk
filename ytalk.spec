@@ -78,8 +78,8 @@ CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
-
+	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+	mandir=$RPM_BUILD_ROOT%{_mandir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
