@@ -65,7 +65,7 @@ make install \
 	prefix=$RPM_BUILD_ROOT/usr \
 	sysconfdir=$RPM_BUILD_ROOT/etc
 
-gzip -9nf $RPM_BUILD_ROOT/usr/share/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README
 
 %clean
@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.gz
 
 %attr(755,root,root) /usr/bin/*
-/usr/share/man/man1/*
+%{_mandir}/man1/*
 
 %config %verify(not size md5 mtime) /etc/ytalkrc
 
