@@ -1,0 +1,11 @@
+--- ytalk-3.1/ytalk.1	Sun Nov 15 07:29:12 1998
++++ ytalk-3.1.new/ytalk.1	Sun Nov 22 02:57:04 1998
+@@ -374,7 +374,7 @@
+ 
+ .SH FILES
+ 
+-/usr/local/etc/ytalkrc
++/etc/ytalkrc
+ .br
+     System-wide defaults file.
+ .PP
