@@ -1,10 +1,10 @@
 Summary:	Uses internet talk protocol to create multiuser chat sessions
-Summary(de):	Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen
-Summary(es):	Usa el protocolo de talk de la internet para crear sesiones de chat entre varios usuarios
-Summary(fr):	Utilise le protocole talk pour créer des discussions multi-utilisateurs
-Summary(pl):	Klient talk umo¿liwiaj±cy jednoczesn± rozmowê z kilkoma osobami
-Summary(pt_BR):	Usa o protocolo de talk da internet para criar sessões de chat entre vários usuários
-Summary(tr):	Talk protokolu kullanarak ikiden fazla kişinin konuşmasını sağlar
+Summary(de.UTF-8):   Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen
+Summary(es.UTF-8):   Usa el protocolo de talk de la internet para crear sesiones de chat entre varios usuarios
+Summary(fr.UTF-8):   Utilise le protocole talk pour crÃ©er des discussions multi-utilisateurs
+Summary(pl.UTF-8):   Klient talk umoÅ¼liwiajÄ…cy jednoczesnÄ… rozmowÄ™ z kilkoma osobami
+Summary(pt_BR.UTF-8):   Usa o protocolo de talk da internet para criar sessÃµes de chat entre vÃ¡rios usuÃ¡rios
+Summary(tr.UTF-8):   Talk protokolu kullanarak ikiden fazla kiÅŸinin konuÅŸmasÄ±nÄ± saÄŸlar
 Name:		ytalk
 Version:	3.1.1
 Release:	12
@@ -25,41 +25,41 @@ allows more than two users per conversation, redirection of program
 output to others, as well as an easy-to-use menu of commands. It uses
 the same talk daemon as the standard talk program.
 
-%description -l de
-ytalk ist eine Erweiterung des herkömmlichen
+%description -l de.UTF-8
+ytalk ist eine Erweiterung des herkÃ¶mmlichen
 Internet-'talk'-Protokolls, die mehr als zwei Benutzer pro
 Unterhaltung und die Umleitung von Programmausgaben an andere
-ermöglicht und ein einfaches Befehlsmenü enthält. Es verwendet
-denselben Talk-Dämon wie das Standardprogramm.
+ermÃ¶glicht und ein einfaches BefehlsmenÃ¼ enthÃ¤lt. Es verwendet
+denselben Talk-DÃ¤mon wie das Standardprogramm.
 
-%description -l es
-ytalk es una extensión del protocolo "talk" de Internet que permite
-más de dos usuarios por conversación, nueva orientación de la salida
-del programa para otros, así como un menú de comandos fácil de usar.
-Utiliza el mismo daemon "talk" que el programa "talk" padrón.
+%description -l es.UTF-8
+ytalk es una extensiÃ³n del protocolo "talk" de Internet que permite
+mÃ¡s de dos usuarios por conversaciÃ³n, nueva orientaciÃ³n de la salida
+del programa para otros, asÃ­ como un menÃº de comandos fÃ¡cil de usar.
+Utiliza el mismo daemon "talk" que el programa "talk" padrÃ³n.
 
-%description -l fr
+%description -l fr.UTF-8
 ytalk est une extension du protocole standard Internet 'talk' qui
 accepte plus de deux utilisateurs par conversation, la redirection des
-affichages aux autres, aussi bien que menus de commandes simples à
-utiliser. Il utilise le même démon que le programme talk.
+affichages aux autres, aussi bien que menus de commandes simples Ã 
+utiliser. Il utilise le mÃªme dÃ©mon que le programme talk.
 
-%description -l pl
-Ytalk jest rozszerzeniem standardowego protoko³u internetowego talk.
-Pozwala na prowadzenie konwersacji przez wiêcej ni¿ dwie osoby, u¿ywa
+%description -l pl.UTF-8
+Ytalk jest rozszerzeniem standardowego protokoÅ‚u internetowego talk.
+Pozwala na prowadzenie konwersacji przez wiÄ™cej niÅ¼ dwie osoby, uÅ¼ywa
 tego samego demona talkd co standardowy klient talk.
 
-%description -l pt_BR
-ytalk é uma extensão do protocolo "talk" da Internet que permite mais
-de dois usuários por conversação, redirecionamento da saída do
-programa para outros, assim como um menu de comandos fácil de usar.
-Ele utiliza o mesmo daemon "talk" que o programa "talk" padrão.
+%description -l pt_BR.UTF-8
+ytalk Ã© uma extensÃ£o do protocolo "talk" da Internet que permite mais
+de dois usuÃ¡rios por conversaÃ§Ã£o, redirecionamento da saÃ­da do
+programa para outros, assim como um menu de comandos fÃ¡cil de usar.
+Ele utiliza o mesmo daemon "talk" que o programa "talk" padrÃ£o.
 
-%description -l tr
-ytalk, standart talk yazılımının gelişmiş bir sürümüdür. İkiden fazla
-kişinin aynı anda konuşmalarını ve program çıktılarının kullanıcılara
-yönlendirilmelerini sağlar. Kolay kullanılabilir bir komut menüsü
-içerir. Standart talkd daemon'u kullanır.
+%description -l tr.UTF-8
+ytalk, standart talk yazÄ±lÄ±mÄ±nÄ±n geliÅŸmiÅŸ bir sÃ¼rÃ¼mÃ¼dÃ¼r. Ä°kiden fazla
+kiÅŸinin aynÄ± anda konuÅŸmalarÄ±nÄ± ve program Ã§Ä±ktÄ±larÄ±nÄ±n kullanÄ±cÄ±lara
+yÃ¶nlendirilmelerini saÄŸlar. Kolay kullanÄ±labilir bir komut menÃ¼sÃ¼
+iÃ§erir. Standart talkd daemon'u kullanÄ±r.
 
 %prep
 %setup -q
