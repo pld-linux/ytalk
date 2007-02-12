@@ -1,10 +1,10 @@
 Summary:	Uses internet talk protocol to create multiuser chat sessions
-Summary(de.UTF-8):   Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen
-Summary(es.UTF-8):   Usa el protocolo de talk de la internet para crear sesiones de chat entre varios usuarios
-Summary(fr.UTF-8):   Utilise le protocole talk pour créer des discussions multi-utilisateurs
-Summary(pl.UTF-8):   Klient talk umożliwiający jednoczesną rozmowę z kilkoma osobami
-Summary(pt_BR.UTF-8):   Usa o protocolo de talk da internet para criar sessões de chat entre vários usuários
-Summary(tr.UTF-8):   Talk protokolu kullanarak ikiden fazla kişinin konuşmasını sağlar
+Summary(de.UTF-8):	Benutzt das Internet-Talk-Protokoll zum Erstellen von Multiuser-Chat-Sitzungen
+Summary(es.UTF-8):	Usa el protocolo de talk de la internet para crear sesiones de chat entre varios usuarios
+Summary(fr.UTF-8):	Utilise le protocole talk pour créer des discussions multi-utilisateurs
+Summary(pl.UTF-8):	Klient talk umożliwiający jednoczesną rozmowę z kilkoma osobami
+Summary(pt_BR.UTF-8):	Usa o protocolo de talk da internet para criar sessões de chat entre vários usuários
+Summary(tr.UTF-8):	Talk protokolu kullanarak ikiden fazla kişinin konuşmasını sağlar
 Name:		ytalk
 Version:	3.1.1
 Release:	12
