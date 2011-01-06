@@ -67,7 +67,8 @@ içerir. Standart talkd daemon'u kullanır.
 
 %build
 %{__autoconf}
-CPPFLAGS="-I/usr/include/ncurses" \
+LIBS="-ltinfo" \
+CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses" \
 CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 ./configure %{_target_platform} \
 	--prefix=%{_prefix} \
