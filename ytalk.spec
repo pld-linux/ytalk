@@ -63,7 +63,7 @@ içerir. Standart talkd daemon'u kullanır.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__autoconf}
@@ -74,14 +74,17 @@ CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 	--prefix=%{_prefix} \
 	--sysconfdir=%{_sysconfdir} \
 	--without-x
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
