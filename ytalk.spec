@@ -6,15 +6,17 @@ Summary(pl.UTF-8):	Klient talk umożliwiający jednoczesną rozmowę z kilkoma o
 Summary(pt_BR.UTF-8):	Usa o protocolo de talk da internet para criar sessões de chat entre vários usuários
 Summary(tr.UTF-8):	Talk protokolu kullanarak ikiden fazla kişinin konuşmasını sağlar
 Name:		ytalk
-Version:	3.1.1
-Release:	14
-License:	BSD
+Version:	3.3.0
+Release:	1
+License:	GPL v2+
 Group:		Networking
-Source0:	http://www.iagora.com/~espel/ytalk/%{name}-%{version}.tar.gz
-# Source0-md5:	e678401ab48be6728ec700458ad8ace0
+#Source0Download: http://ytalk.ourproject.org/download.html
+Source0:	ftp://ftp.ourproject.org/pub/ytalk/%{name}-%{version}.tar.bz2
+# Source0-md5:	a82e4c82f724e36a6a3242d3839d4332
 Patch0:		%{name}.patch
-URL:		http://www.iagora.com/~espel/ytalk/ytalk.html
-BuildRequires:	autoconf
+URL:		http://ytalk.ourproject.org/
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake
 BuildRequires:	ncurses-devel >= 5.0
 Provides:	talk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -66,14 +68,11 @@ içerir. Standart talkd daemon'u kullanır.
 %patch -P0 -p1
 
 %build
+%{__aclocal} -I m4
 %{__autoconf}
-LIBS="-ltinfo" \
-CPPFLAGS="%{rpmcppflags} -I/usr/include/ncurses" \
-CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix} \
-	--sysconfdir=%{_sysconfdir} \
-	--without-x
+%{__autoheader}
+%{__automake}
+%configure
 
 %{__make}
 
@@ -81,16 +80,14 @@ CFLAGS="%{rpmcflags}" LDFLAGS="%{rpmldflags}" \
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
-	mandir=$RPM_BUILD_ROOT%{_mandir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog BUGS
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%doc AUTHORS ChangeLog README
+%attr(755,root,root) %{_bindir}/ytalk
+%{_mandir}/man1/ytalk.1*
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/ytalkrc

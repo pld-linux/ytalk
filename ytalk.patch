@@ -1,6 +1,6 @@
---- ytalk-3.1/ytalk.1	Sun Nov 15 07:29:12 1998
-+++ ytalk-3.1.new/ytalk.1	Sun Nov 22 02:57:04 1998
-@@ -374,7 +374,7 @@
+--- ytalk-3.3.0/docs/ytalk.1.in.orig	2005-02-07 19:21:09.000000000 +0100
++++ ytalk-3.3.0/docs/ytalk.1.in	2025-06-14 09:08:37.503987313 +0200
+@@ -348,7 +348,7 @@ YTalk requests across the PPP link.
  
  .SH FILES
  
